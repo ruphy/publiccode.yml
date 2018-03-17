@@ -7,13 +7,15 @@ legal:
 maintainance:                        # Maintainance status as open-source software
   - maintanance-type: commercial     # Whether there is a commercial contract of maintainance in place. No -> community
     maintained-until: 2019-01-01     # If maintainance-type is commercial, then the maintenance contract is due
-    technical-contacts:              # Name of the people that are currently technically maintaining this software
+    contacts:                        # Name of the people that are currently technically maintaining this software
     - name: Francesco Rossi
       email: francesco.rossi@comune.reggioemilia.it
       affiliation: Comune di Reggio Emilia
+      role: System Administrator
     - name: Dario Bianchi
       email: dario.bianchi@fornitore.it
       affiliation: Fornitore Privato Spa
+      role: Developer
 
 description:
   - name: Medusa                                          # Short descriptive name
@@ -23,6 +25,14 @@ description:
       Very long description of this software, also split
       on multiple rows. You should note what the software
       is and why one should need it.
+    languages:
+      - javascript
+      - html
+    repository:
+      - http://github.com/myprojectrepo
+    links:
+      - http://myproject.homepage.com
+      - http://myproject.docs.com
     screenshots:                                          # Screen shots used to get a quick look&feel of the software
       - img/sshot1.jpg
       - img/sshot2.jpg
@@ -31,7 +41,7 @@ description:
       - https://youtube.com/xxxxxxxx 
     version: "1.0"                                        # Last stable version
     released: 2017-04-15                                  # Date of last stable software release 
-    platforms: web                    # or Windows, Mac, Linux, etc. 
+    platform: web                    # or Windows, Mac, Linux, etc. 
 
 ita-pianotriennale:     # Aderenza al piano triennale. Chiave sotto namespace "ita-", quindi solo italiana
   use-spid: yes         # yes, no, or "n/a" se il software non ha un login
@@ -42,14 +52,16 @@ meta:                            # Meta information to help categorization of th
     pa-type: city 
     category: ita-anagrafe       # Category list in National Guidelines (possibly, per-country)
     used-by:                     # Which other public administrations are known to use this software
-      - Comune di Firenze
-      - Comune di Roma 
+      - [Comune di Firenze](http://www.indicepa.gov.it/ricerca/n-dettaglioamministrazione.php?cod_amm=c_d612)
+      - [Comune di Roma](http://www.indicepa.gov.it/ricerca/n-dettaglioamministrazione.php?cod_amm=c_d612)
 
 dependencies:             # List of dependencies. The only mandatory list is the proprietary one
   open:                 # List of open dependencies. Optional
-    - MySQL
+    - [MySQL](http://mysql.com)
   proprietary:          # List of proprietary software that must be bought to be able to use this software
     - Oracle 11.4
     - IBM SoftLayer 4.5
   hardware:             # List of special hardware required. Optional.
     - NFC Reader (chipset xxx) 
+  services:
+    - [Indice PA](http://indicepa.gov.it)
