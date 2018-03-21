@@ -121,7 +121,7 @@ file, you can point to it through `legal/authors_file`.
 
 * Type: string (path to file)
 * Presence: optional
-* Example: "doc/AUTHORS.txt"
+* Example: "AUTHORS.txt"
 
 Some open-source softwares adopt a convention of identify the copyright
 holders through a file that lists all the entities that own the
@@ -134,7 +134,7 @@ authors file, using a path relative to the root of the repository.
 
 * Type: string
 * Presence: mandatory
-* Example: "City of Amsterday"
+* Example: "City of Amsterdam"
 
 This string describes the entity that owns this repository; this might
 or might not be the same entity who owns the copyright on the code
@@ -169,11 +169,13 @@ developed or not.
 * Values: "commercial", "community", "none"
 
 This key describes how the software is currently maintained.
-"Commercial" means that there is a commercial contract that binds
+"commercial" means that there is a commercial contract that binds
 an entity to the maintenance of the software; "community" means that
 the software is currently maintained by one or more people that donate
-their time to the project; "none" means that the software is not
-actively maintained.
+their time to the project. "community" also applies also to cases
+where the authors, even if they are a commercial company, want to
+express a commit to maintain their software outside any binding
+contract; "none" means that the software is not actively maintained.
 
 ### Key `maintenance/until`
 
